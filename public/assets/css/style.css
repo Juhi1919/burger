@@ -1,0 +1,51 @@
+
+.burger-box {
+	position: relative;
+	/*border: 3px solid black;*/
+}
+
+.bottom {
+	margin-top: 10px;
+	/*border: 3px solid black;*/
+	bottom: 20px;
+}
+
+.btn {
+	display: block;
+	margin: 0 auto;
+	
+}
+
+/* text below submit button */
+.directions {
+	font-size: 12px;
+}
+
+.devourBurgerButton {
+	position: absolute;
+	right: 5px;
+}
+
+body {
+	background-color: rgb(166, 216, 231);
+
+}
+
+img {
+	padding-top: 2%;
+	padding-bottom: 1%;
+}
+
+h1 {
+	font-size: 60px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+	padding-top: 40px;
+	font-size: 12px;
+}
