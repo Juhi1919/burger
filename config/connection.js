@@ -15,5 +15,5 @@ else {
     database : 'burgers'
   });
 };
-
+connection.connect();
 module.exports = connection; 
