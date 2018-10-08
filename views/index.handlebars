@@ -1,64 +1,44 @@
-
 <div class="container">
-	<div class="text-center">
-	  <img src="./assets/images/burger.jpg" class="rounded" alt="Burger">
-	</div>
+  <center>
+    <!-- ready for eating-->
+    <div class="col-md-6">
+      <h5>Ready for eating!</h5>
+      <div id="readyburger">
 
-	<h1 class="text-center">EAT Your Favourite Burger!!</h1>
-	<!-- Row for list of burgers entered -->
-	<div class="row">
-		<!-- Left list: Burgers entered, but not devoured -->
-		<div class="col-md-5 burger-box" id="not-devoured">
-			<!-- Pass in data from server.js -->
-			<ul class="list-group">
-			  {{#each burgers}}
-			  	{{#unless devoured}}
-		<!--burgers, left list -->
-            <li class="list-group-item">
-	        <span class="label" id={{this.id}}>{{this.id}}.  {{this.burger_name}}</span>
-            <button type="button" data-id="{{this.id}}" class="devourBurgerButton">Devour It!!</button>
-            </li>
-					{{/unless}}
-			  {{/each}}
-			</ul>
-		</div>
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class="add burger">
+              <li class="burger adding">{{id}}. {{burger_name}}</li>
+                <span class="fordevour_btn">
+                  <button class="btn btn-devour" type="submit">Devour It!</button>
+                </span>
+            </div>
+          </form>
+          {{/unless}}
+        {{/each}}
 
-		<!-- space between the two columns -->
-		<div class="col-md-2" id="blank">
-		</div>
+      </div>
+    </div>
 
-		<!-- Right list: Burgers devoured -->
-		<div class="col-md-5 burger-box" id="devoured">
-			<ul class="list-group">
-				{{#each burgers}}
-					{{#if devoured}}
-	    <!-- burgers, right list--> 
-                    <li class="list-group-item disabled">
-	                <span class="label" id={{this.id}}>{{this.id}}.  {{this.burger_name}}</span>
-                    </li>
+    <!-- alreay eat -->
+    <div class="col-lg-6">
+      <h5>Already eaten!</h5>
+      <div id="already_eat">
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <form action="burger/clear/{{id}}" method="POST">
+              <div>
+                <li class="devour_burger">{{id}}. {{burger_name}}</li>
+                <span class="clear">
+                  <button class="btn btn-clear" type="submit">Clear Here!</button>
+                </span>
+              </div>
+            </form>
+          {{/if}}
+        {{/each}}
 
-					{{/if}}
-				{{/each}}
-			</ul>
-		</div>
-	</div>
-
-	<!-- for textbox to enter in new burger -->
-	<div class="row justify-content-center bottom">
-		<div class="col-md-5">
-			<form class="create-form">
-				<div class="form-group">
-					<input class="form-control form-control-lg" type="text" name="burger_name" id="burgerInfo" placeholder="Type in a burger here!">
-					<br>
-					<button type="submit" class="btn btn-primary btn-lg burger-button">Submit Order...</button>
-
-					<p class="text-center directions">Type in the name of a burger you want to eat, then click "submit".</p>
-				</div>
-			</form>
-		</div>
-	</div>
-	
-  <div class="footer">
-		<p>&#169; Copyright 2018</p>
-  </div>
+      </div>
+    </div>
+  </center>
 </div>

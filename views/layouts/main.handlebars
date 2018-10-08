@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/burgerJS.js"></script>		
-		<title>Eat Your Favourite Burger!!</title>
-	</head>
-	<body>
-		{{{ body }}}
+<html>
+  <head>
+    <title>Eat da Burger!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
 
-	</body>
-</html>
+      <div class="container">
+      
+      <br>
+
+      <center>
+        <div class="row">
+          <img src="../assets/image/burger.jpg">
+        </div>
+      </center>
+    
+      <center>
+        <h1>Eat da Burger! </h1>
+      </center>
+      <br>
+     
+      {{{body}}}
+
+      <br><br>      
+
+      <!--Burgers Form -->
+      <form action="burger/create" method="POST"> 
+         
+        <div class="row">
+         
+         <!-- Burger -->
+          <div class="form-group col-lg-6">
+            <center><label for="enterburger" class="label">Enter Burger of your choice...!</label></center>
+            <textarea class="form-control" columns="4" rows="3" id="burger_content" name="burger_name"></textarea>
+            
+          </div>
+        <!-- Submit Button -->
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-primary">Place Order</button>
+        </center>
+      </form>
+      <br>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!--JavaScript -->
+
+ </body>

@@ -1,51 +1,22 @@
-
-.burger-box {
-	position: relative;
-	/*border: 3px solid black;*/
-}
-
-.bottom {
-	margin-top: 10px;
-	/*border: 3px solid black;*/
-	bottom: 20px;
-}
-
-.btn {
-	display: block;
-	margin: 0 auto;
-	
-}
-
-/* text below submit button */
-.directions {
-	font-size: 12px;
-}
-
-.devourBurgerButton {
-	position: absolute;
-	right: 5px;
-}
-
 body {
-	background-color: rgb(166, 216, 231);
-
+    background-color: rgb(186, 175, 247);
+  }
+h1{
+  color: indigo;
 }
-
-img {
-	padding-top: 2%;
-	padding-bottom: 1%;
+img{
+  height: 200px;
+  width: 200px;
 }
-
-h1 {
-	font-size: 60px;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+.label{
+  color: white;
 }
-
-.footer {
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  height: 100px;
-	padding-top: 40px;
-	font-size: 12px;
+.form-control{
+  padding: 5px;
+  border: 1.5px solid black;
+  border-radius: 5px ;
+}
+.btn-devour{
+  background-color:greenyellow;
+  padding: 5.5px;
 }
